@@ -128,23 +128,48 @@ public class Pattern {
 //            }
 //            System.out.println();
 //        }
-        //DIAMOND PATTERN
-        x=4;
+//        //DIAMOND PATTERN
+//        x=4;
+//        for (int i = 1; i <=x; i++) {
+//            for (int j = 1; j <=x-i ; j++) {
+//                System.out.print(" ");
+//            }
+//            for (int j = 1; j <2*i; j++) {
+//                System.out.print("*");
+//            }
+//            System.out.println();
+//        }
+//        for (int i = x; i >=1; i--) {
+//            for (int j = 1; j <=x-i ; j++) {
+//                System.out.print(" ");
+//            }
+//            for (int j = 1; j <2*i; j++) {
+//                System.out.print("*");
+//            }
+//            System.out.println();
+//        }
+        //Number pyramid
+//        x=5;
+//        for (int i = 1; i <=x ; i++) {
+//            for (int j = 1; j <=x-i ; j++) {
+//                System.out.print(" ");
+//            }
+//            for (int j = 1; j <=i ; j++) {
+//                System.out.print(i+" ");
+//            }
+//            System.out.println();
+//        }
+    //PALINDROMIC PATTERN WITH NUMBERS IN JAVA
+        x=5;
         for (int i = 1; i <=x; i++) {
             for (int j = 1; j <=x-i ; j++) {
                 System.out.print(" ");
             }
-            for (int j = 1; j <2*i; j++) {
-                System.out.print("*");
+            for (int j = i; j >=1 ; j--) {
+                System.out.print(j);
             }
-            System.out.println();
-        }
-        for (int i = x; i >=1; i--) {
-            for (int j = 1; j <=x-i ; j++) {
-                System.out.print(" ");
-            }
-            for (int j = 1; j <2*i; j++) {
-                System.out.print("*");
+            for (int j = 2; j <=i ; j++) {
+                System.out.print(j);
             }
             System.out.println();
         }
