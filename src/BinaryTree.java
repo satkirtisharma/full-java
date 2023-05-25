@@ -19,7 +19,29 @@ public class BinaryTree {
             n.left=buildTree(node);
             n.right=buildTree(node);
             return n;
-        }public static void preorder(Node n){
+        }
+        public static void insert(Node temp,int key){
+            Queue <Node> q=new LinkedList  <Node>() ;
+            q.add(temp);
+            while (!q.isEmpty()){
+                Node curr=q.poll();
+                if(curr.left==null){
+                    curr.left=new Node(key);
+                    break;
+                }
+                else {
+                    q.add(curr.left);
+                }
+                if(curr.right==null){
+                    curr.right=new Node(key);
+                    break;
+                }
+                else {
+                    q.add(curr.right);
+                }
+            }
+        }
+        public static void preorder(Node n){
             if (n==null)return;
             System.out.println(n.data);
             preorder(n.left);
@@ -118,20 +140,22 @@ public class BinaryTree {
 
     }
     public static void main(String[] args) {
-        //int[]nodes={1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
-        int []nodes={5, 3, 1, -1, -1, 4, -1, -1, 8, 7, -1, -1, 9, -1, -1};
+        int[]nodes={1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
+//        int []nodes={5, 3, 1, -1, -1, 4, -1, -1, 8, 7, -1, -1, 9, -1, -1};
         Binary_Tree b=new Binary_Tree();
         Node n=b.buildTree(nodes);
 //        System.out.println(n.data);
-//        b.preorder(n);
+    //    b.preorder(n);
 //        b.inorder(n);
-////
-//        b.levelorder2(n);
-//        System.out.println(b.height(n));
-//        System.out.println(b.count(n));
-//        System.out.println(b.sum(n));
-        System.out.println(b.diameter(n));
-        b.diameter1(n);
-        System.out.println(b.diameter);
+//        b.postorder(n);
+
+        b.levelorder2(n);
+////        System.out.println(b.height(n));
+////        System.out.println(b.count(n));
+////        System.out.println(b.sum(n));
+//        System.out.println(b.diameter(n));
+//        b.diameter1(n);
+//        System.out.println(b.diameter);
+
     }
 }
