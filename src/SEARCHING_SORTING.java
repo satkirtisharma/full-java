@@ -98,7 +98,7 @@ public class SEARCHING_SORTING {
        //  BubbleSort(arr);
         // SelectionSort(arr);
     // InsertionSort(arr);
-      //  mergesort(arr,0,arr.length-1);
+        mergesort(arr,0,arr.length-1);
         quicksort(arr,0,arr.length-1);
         for (int i = 0; i < arr.length; i++) {
             System.out.println(arr[i]);

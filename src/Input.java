@@ -7,5 +7,7 @@ public class Input {
         String s=sc.next();//take input at the spaces;
         String s1=sc.nextLine();//take input at the next line
         //similarly for double ,boolean and others
+        int a[]={3,3,45,56,3};
+        Arrays.sort(a);
     }
 }
